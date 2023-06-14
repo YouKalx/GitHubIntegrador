@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>cla</title>
+      <title>English House/Intranet/Administrador</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -100,12 +100,12 @@
 
 
                         <label class="form-label" for="form2Example17">Usuario</label>
-                          <input type = "text" name="usu" class="form-control form-control-lg" />  
+                          <input type = "text" name="usuadm" class="form-control form-control-lg" />  
                         </div>
 
                         <div class="form-outline mb-4">
                          <label class="form-label" for="form2Example27">Contraseña</label>
-                          <input type = "password" name = "pas" class="form-control form-control-lg" />  
+                          <input type = "password" name = "passadm" class="form-control form-control-lg" />  
                         </div>
 
                         <div class="pt-1 mb-4">

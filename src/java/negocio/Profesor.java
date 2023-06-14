@@ -9,60 +9,63 @@ package negocio;
  * @author ShuKalx
  */
 public class Profesor {
-    String cod, nom, ape, dni,cel,niv, usu, pas;
-    
+
+    String IDpro, nbpro, appro, ndni, gen, niv, email, ncel, usupro, passpro;
+
     public Profesor() {
     }
-    
-    public Profesor(String cod, String nom, String ape, String dni, String cel, String niv, String usu, String pas) {
-        this.cod = cod;
-        this.nom = nom;
-        this.ape = ape;
-        this.dni = dni;
-        this.cel = cel;
+
+    public Profesor(String IDpro, String nbpro, String appro, String ndni, String gen, String niv, String email, String ncel, String usupro, String passpro) {
+        this.IDpro = IDpro;
+        this.nbpro = nbpro;
+        this.appro = appro;
+        this.ndni = ndni;
+        this.gen = gen;
         this.niv = niv;
-        this.usu = usu;
-        this.pas = pas;
+        this.email = email;
+        this.ncel = ncel;
+        this.usupro = usupro;
+        this.passpro = passpro;
     }
 
-    public String getCod() {
-        return cod;
+    public String getIDpro() {
+        return IDpro;
     }
 
-    public void setCod(String cod) {
-        this.cod = cod;
+    public void setIDpro(String IDpro) {
+        this.IDpro = IDpro;
     }
 
-    public String getNom() {
-        return nom;
+    public String getNbpro() {
+        return nbpro;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNbpro(String nbpro) {
+        this.nbpro = nbpro;
     }
 
-    public String getApe() {
-        return ape;
+    public String getAppro() {
+        return appro;
     }
 
-    public void setApe(String ape) {
-        this.ape = ape;
+    public void setAppro(String appro) {
+        this.appro = appro;
     }
 
-    public String getDni() {
-        return dni;
+    public String getNdni() {
+        return ndni;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setNdni(String ndni) {
+        this.ndni = ndni;
     }
 
-    public String getCel() {
-        return cel;
+    public String getGen() {
+        return gen;
     }
 
-    public void setCel(String cel) {
-        this.cel = cel;
+    public void setGen(String gen) {
+        this.gen = gen;
     }
 
     public String getNiv() {
@@ -73,20 +76,36 @@ public class Profesor {
         this.niv = niv;
     }
 
-    public String getUsu() {
-        return usu;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsu(String usu) {
-        this.usu = usu;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPas() {
-        return pas;
+    public String getNcel() {
+        return ncel;
     }
 
-    public void setPas(String pas) {
-        this.pas = pas;
+    public void setNcel(String ncel) {
+        this.ncel = ncel;
     }
-    
+
+    public String getUsupro() {
+        return usupro;
+    }
+
+    public void setUsupro(String usupro) {
+        this.usupro = usupro;
+    }
+
+    public String getPasspro() {
+        return passpro;
+    }
+
+    public void setPasspro(String passpro) {
+        this.passpro = passpro;
+    }
+
 }

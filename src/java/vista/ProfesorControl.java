@@ -1,4 +1,3 @@
-
 package vista;
 
 import java.io.IOException;
@@ -17,75 +16,81 @@ public class ProfesorControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String acc= request.getParameter("acc");
+        String acc = request.getParameter("acc");
         if (acc.equals("Registrar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");   
-            String cel=request.getParameter("cel");
-            String niv=request.getParameter("niv");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new ProfesorServicioImp().grabar(cod, nom, ape, dni,cel,niv, usu, pas);
+            String IDpro = request.getParameter("IDpro");
+            String nbpro = request.getParameter("nbpro");
+            String appro = request.getParameter("appro");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String niv = request.getParameter("niv");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usupro = request.getParameter("usupro");
+            String passpro = request.getParameter("passpro");
+            String msg = new ProfesorServicioImp().grabar(IDpro, nbpro, appro, ndni, gen, niv, email, ncel, usupro, passpro);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_prof_mensaje.jsp");   
+            response.sendRedirect("AdmiPortal_prof_mensaje.jsp");
         }
         if (acc.equals("Iniciar Sesion")) {
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            Object[]fil=new ProfesorServicioImp().validar(usu, pas);
-            if (fil!=null) {
+            String usu = request.getParameter("usupro");
+            String pas = request.getParameter("passpro");
+            Object[] fil = new ProfesorServicioImp().validar(usu, pas);
+            if (fil != null) {
                 request.getSession().setAttribute("fil", fil);
-                response.sendRedirect("Menu.jsp");   
-            }else{
+                response.sendRedirect("Menu.jsp");
+            } else {
                 request.getSession().setAttribute("msg", "Acceso no permitido");
-                response.sendRedirect("Profesor_Intranet_mensaje.jsp");     
-            }  
+                response.sendRedirect("Profesor_Intranet_mensaje.jsp");
+            }
         }
         if (acc.equals("Buscar")) {
-            String cod=request.getParameter("cod");
-            Object[]f=new ProfesorServicioImp().buscar(cod);
-            if (f!=null) {
+            String IDpro = request.getParameter("IDpro");
+            Object[] f = new ProfesorServicioImp().buscar(IDpro);
+            if (f != null) {
                 request.getSession().setAttribute("f", f);
                 response.sendRedirect("AdmiPortal_prof_modificar.jsp");
-            }else{
+            } else {
                 request.getSession().setAttribute("msg", "No existe el profesor solicitado");
-                response.sendRedirect("AdmiPortal_prof_mensaje.jsp");  
+                response.sendRedirect("AdmiPortal_prof_mensaje.jsp");
             }
         }
         if (acc.equals("Listar")) {
-            List lis=new ProfesorServicioImp().listar();
+            List lis = new ProfesorServicioImp().listar();
             request.getSession().setAttribute("lis", lis);
             response.sendRedirect("AdmiPortal_prof_listar.jsp");
         }
-        
+
         if (acc.equals("Actualizar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String cel=request.getParameter("cel");
-            String niv=request.getParameter("niv");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new ProfesorServicioImp().Actualizar(cod, nom, ape, dni,cel,niv, usu, pas);
+            String IDpro = request.getParameter("IDpro");
+            String nbpro = request.getParameter("nbpro");
+            String appro = request.getParameter("appro");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String niv = request.getParameter("niv");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usupro = request.getParameter("usupro");
+            String passpro = request.getParameter("passpro");
+            String msg = new ProfesorServicioImp().Actualizar(IDpro, nbpro, appro, ndni, gen, niv, email, ncel, usupro, passpro);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_prof_mensaje.jsp");  
+            response.sendRedirect("AdmiPortal_prof_mensaje.jsp");
         }
-        
+
         if (acc.equals("Eliminar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String cel=request.getParameter("cel");
-            String niv=request.getParameter("niv");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new ProfesorServicioImp().eliminar(cod, nom, ape, dni,cel,niv, usu, pas);
+            String IDpro = request.getParameter("IDpro");
+            String nbpro = request.getParameter("nbpro");
+            String appro = request.getParameter("appro");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String niv = request.getParameter("niv");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usupro = request.getParameter("usupro");
+            String passpro = request.getParameter("passpro");
+            String msg = new ProfesorServicioImp().eliminar(IDpro, nbpro, appro, ndni, gen, niv, email, ncel, usupro, passpro);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_prof_mensaje.jsp");   
+            response.sendRedirect("AdmiPortal_prof_mensaje.jsp");
         }
     }
 

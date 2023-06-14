@@ -1,11 +1,18 @@
 package servicio;
+
 import java.util.List;
 
 public interface ProfesorServicio {
-    public String grabar(String cod, String nom, String ape, String dni, String cel, String niv, String usu, String pas);
-    public Object[] validar(String usu, String pas);
-    public Object[] buscar(String cod);
+
+    public String grabar(String IDpro, String nbpro, String appro, String ndni, String gen, String niv, String email, String ncel, String usupro, String passpro);
+
+    public Object[] validar(String usupro, String passpro);
+
+    public Object[] buscar(String IDpro);
+
     public List listar();
-    public  String Actualizar(String cod, String nom, String ape, String dni,String cel, String niv, String usu, String pas);
-    public String eliminar (String cod, String nom, String ape, String dni,String cel, String niv, String usu, String pas);
+
+    public String Actualizar(String IDpro, String nbpro, String appro, String ndni, String gen, String niv, String email, String ncel, String usupro, String passpro);
+
+    public String eliminar(String IDpro, String nbpro, String appro, String ndni, String gen, String niv, String email, String ncel, String usupro, String passpro);
 }

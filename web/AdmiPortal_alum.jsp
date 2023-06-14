@@ -16,7 +16,7 @@
 	<meta name="viewport"
 		content="width=device-width,
 				initial-scale=1.0">
-	<title>GeeksForGeeks</title>
+	<title>Portal del Administrador/Estudiantes</title>
 	<link rel="stylesheet"
 		href="css/admiPortal_alum.css">
 	<link rel="stylesheet"
@@ -90,6 +90,13 @@
 						<a class="nav-link" href="AdmiPortal_actividad.jsp"><h5>Eventos</h5></a>
 					</div>
 
+					<div class="nav-option option5">
+						<img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+							class="nav-img"
+							alt="blog">
+						<a class="nav-link" href="AdmiPortal_notas.jsp"><h5>Notas</h5></a>
+					</div>
 
 					<div class="nav-option option6">
 						<img src=

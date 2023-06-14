@@ -3,68 +3,75 @@ package persistencia;
 import java.util.List;
 import negocio.Administrador;
 
-public class AdministradorDaoImp implements AdministradorDao{
+public class AdministradorDaoImp implements AdministradorDao {
 
     @Override
     public String grabar(Administrador emp) {
-        String sql="insert into administrador values('"+emp.getCod()+"','"+emp.getNom()+"','"+emp.getApe()+"','"+emp.getDni()+"','"+emp.getUsu()+"','"+emp.getPas()+"')";
+        String sql = "insert into administrador values('" + emp.getIDadm()
+                + "','" + emp.getNbadm() + "','" + emp.getApadm() + "','" + emp.getNdni() + "','" + emp.getGen() + "','"
+                + emp.getEmail() + "','" + emp.getNcel() + "','" + emp.getUsuadm() + "','" + emp.getPassadm() + "')";
         return Operacion.ejecutar(sql);
     }
 
     @Override
     public String actualizar(Administrador emp) {
-        String sql="update administrador set nom='"+emp.getNom()+","+"ape='"+emp.getApe()+","+"dni='"+emp.getDni()+","+"usu='"+emp.getUsu()+","+"pas='"+emp.getPas()+"where cod="+emp.getPas()+"'";
+        String sql = "update administrador set nbadm='" + emp.getNbadm() + "'where IDadm='" + emp.getIDadm() + "'";
         return Operacion.ejecutar(sql);
     }
 
     @Override
     public String eliminar(Administrador emp) {
-        String sql="delete from administrador where cod='"+emp.getCod()+"'";
+        String sql = "delete from administrador where IDadm='" + emp.getIDadm() + "'";
         return Operacion.ejecutar(sql);
     }
 
     @Override
-    public Administrador buscar(String cod) {
-        String sql="select * from administrador where cod='"+cod+"'";
-        Object[]fil=Operacion.buscar(sql);
-        if (fil!=null) {
-           Administrador emp=new Administrador();
-           emp.setCod(fil[0].toString());
-           emp.setNom(fil[1].toString());
-           emp.setApe(fil[2].toString());
-           emp.setDni(fil[3].toString());
-           emp.setUsu(fil[4].toString());
-           emp.setPas(fil[5].toString());
-           return emp;
+    public Administrador buscar(String IDadm) {
+        String sql = "select * from administrador where IDadm ='" + IDadm + "'";
+        Object[] fil = Operacion.buscar(sql);
+        if (fil != null) {
+            Administrador emp = new Administrador();
+            emp.setIDadm(fil[0].toString());
+            emp.setNbadm(fil[1].toString());
+            emp.setApadm(fil[2].toString());
+            emp.setNdni(fil[3].toString());
+            emp.setGen(fil[4].toString());
+            emp.setNcel(fil[5].toString());
+            emp.setEmail(fil[6].toString());
+            emp.setUsuadm(fil[7].toString());
+            emp.setPassadm(fil[8].toString());
+            return emp;
         }
-        return null;         
+        return null;
     }
 
     @Override
     public List listar() {
-        String sql="select * from administrador";
-        List lis=Operacion.listar(sql);
-        if (lis!=null) {
+        String sql = "select * from administrador";
+        List lis = Operacion.listar(sql);
+        if (lis != null) {
             return lis;
         }
         return null;
     }
 
     @Override
-    public Administrador validar(String usu, String pas) {
-        String sql="select * from administrador where usu like '"+usu+"' and pas like '"+pas+"'";
-        Object[]fil=Operacion.buscar(sql);
-        if (fil!=null) {
-           Administrador emp=new Administrador();
-           emp.setCod(fil[0].toString());
-           emp.setNom(fil[1].toString());
-           emp.setApe(fil[2].toString());
-           emp.setDni(fil[3].toString());
-           emp.setUsu(fil[4].toString());
-           emp.setPas(fil[5].toString());
-           return emp;
+    public Administrador validar(String usuadm, String passadm) {
+        String sql = "select * from administrador where usuadm like '" + usuadm + "' and passadm like '" + passadm + "'";
+        Object[] fil = Operacion.buscar(sql);
+        if (fil != null) {
+            Administrador emp = new Administrador();
+            emp.setIDadm(fil[0].toString());
+            emp.setNbadm(fil[1].toString());
+            emp.setApadm(fil[2].toString());
+            emp.setNdni(fil[3].toString());
+            emp.setGen(fil[4].toString());
+            emp.setNcel(fil[5].toString());
+            emp.setEmail(fil[6].toString());
+            emp.setUsuadm(fil[7].toString());
+            emp.setPassadm(fil[8].toString());
+            return emp;
         }
         return null;
     }
-    
 }

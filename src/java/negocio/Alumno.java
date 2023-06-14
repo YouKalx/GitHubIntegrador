@@ -9,60 +9,62 @@ package negocio;
  * @author ShuKalx
  */
 public class Alumno {
-    String cod, nom, ape, dni,cel,niv, usu, pas;
+    String IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu;
 
     public Alumno() {
     }    
-    
-    public Alumno(String cod, String nom, String ape, String dni, String cel, String niv, String usu, String pas) {
-        this.cod = cod;
-        this.nom = nom;
-        this.ape = ape;
-        this.dni = dni;
-        this.cel = cel;
+
+    public Alumno(String IDalu, String nbalu, String apalu, String ndni, String gen, String niv, String email, String ncel, String usualu, String passalu) {
+        this.IDalu = IDalu;
+        this.nbalu = nbalu;
+        this.apalu = apalu;
+        this.ndni = ndni;
+        this.gen = gen;
         this.niv = niv;
-        this.usu = usu;
-        this.pas = pas;
+        this.email = email;
+        this.ncel = ncel;
+        this.usualu = usualu;
+        this.passalu = passalu;
     }
 
-    public String getCod() {
-        return cod;
+    public String getIDalu() {
+        return IDalu;
     }
 
-    public void setCod(String cod) {
-        this.cod = cod;
+    public void setIDalu(String IDalu) {
+        this.IDalu = IDalu;
     }
 
-    public String getNom() {
-        return nom;
+    public String getNbalu() {
+        return nbalu;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNbalu(String nbalu) {
+        this.nbalu = nbalu;
     }
 
-    public String getApe() {
-        return ape;
+    public String getApalu() {
+        return apalu;
     }
 
-    public void setApe(String ape) {
-        this.ape = ape;
+    public void setApalu(String apalu) {
+        this.apalu = apalu;
     }
 
-    public String getDni() {
-        return dni;
+    public String getNdni() {
+        return ndni;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setNdni(String ndni) {
+        this.ndni = ndni;
     }
 
-    public String getCel() {
-        return cel;
+    public String getGen() {
+        return gen;
     }
 
-    public void setCel(String cel) {
-        this.cel = cel;
+    public void setGen(String gen) {
+        this.gen = gen;
     }
 
     public String getNiv() {
@@ -73,21 +75,41 @@ public class Alumno {
         this.niv = niv;
     }
 
-    public String getUsu() {
-        return usu;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsu(String usu) {
-        this.usu = usu;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPas() {
-        return pas;
+    public String getNcel() {
+        return ncel;
     }
 
-    public void setPas(String pas) {
-        this.pas = pas;
+    public void setNcel(String ncel) {
+        this.ncel = ncel;
     }
+
+    public String getUsualu() {
+        return usualu;
+    }
+
+    public void setUsualu(String usualu) {
+        this.usualu = usualu;
+    }
+
+    public String getPassalu() {
+        return passalu;
+    }
+
+    public void setPassalu(String passalu) {
+        this.passalu = passalu;
+    }
+
+
     
     
+
+
 }

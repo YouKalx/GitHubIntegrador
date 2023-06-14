@@ -1,170 +1,163 @@
-<%-- 
-    Document   : dashboard_admin
-    Created on : 3 may. 2023, 20:00:17
-    Author     : ShuKalx
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible"
-		content="IE=edge">
-	<meta name="viewport"
-		content="width=device-width,
-				initial-scale=1.0">
-	<title>GeeksForGeeks</title>
-	<link rel="stylesheet"
-		href="css/admiPortal_alum.css">
-	<link rel="stylesheet"
-		href="css/responsive_admin.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width,
+              initial-scale=1.0">
+        <title>Portal del estudiante</title>
         <link rel="stylesheet"
-		href="css/style">
-	<link rel="stylesheet"
-		href="css/responsive">
-</head>
-
-<body>
-
-	<!-- for header part -->
-	<header>
-
-		<div class="logosec">		
-			<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
-				class="icn menuicn"
-				id="menuicn"
-				alt="menu-icon">
-                        <div class="logo">Portal Alumno</div>
-		</div>
+              href="css/alumnoPortal.css">
+        <link rel="stylesheet"
+              href="css/responsive_admin.css">
+        <link rel="stylesheet"
+              href="css/style">
+        <link rel="stylesheet"
+              href="css/responsive">
+        <link rel="stylesheet"
+              href="css/alumportalinicio.css">
 
 
-		<div class="message">
-			<div class="dp">
-			<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
-					class="dpicn"
-					alt="dp">
-			</div>
-		</div>
-	</header>
+    </head>
 
-	<div class="main-container">
-		<div class="navcontainer">
-			<nav class="nav">
-				<div class="nav-upper-options">
-					<div class="nav-option option1">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
-							class="nav-img"
-							alt="dashboard">
-						<a class="nav-link" href="1_AdmiPortalPrincipal.jsp"><h5>Inicio</h5></a>
-                                                
-					</div>
+    <body>
 
-					<div class="option2 nav-option">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
-							class="nav-img"
-							alt="articles">
-						<a class="nav-link" href="AdmiPortal_prof.jsp"><h5>Perfil</h5></a>
-                                                
-					</div>
+        <!-- for header part -->
+        <header>
 
-					<div class="nav-option option3">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
-							class="nav-img"
-							alt="report">
-						<a class="nav-link" href="AdmiPortal_alum.jsp"><h5>Curso</h5></a>
-					</div>
-
-					<div class="nav-option option4">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
-							class="nav-img"
-							alt="institution">
-						<a class="nav-link" href="Intranet.jsp"><h5>Horario</h5></a>
-					</div>
-
-					<div class="nav-option option5">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
-							class="nav-img"
-							alt="blog">
-						<a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
-					</div>
-
-					<div class="nav-option option6">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
-							class="nav-img"
-							alt="settings">
-                                                <a class="nav-link" href="Intranet.jsp"><h5>Horario</h5></a>
-					</div>
-
-					<div class="nav-option logout">
-						<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
-							class="nav-img"
-							alt="logout">
-						<a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
-					</div>
-
-				</div>
-			</nav>
-		</div>
-		<div class="main">
-
-			<div class="box-container">
-
-				<div class="box box1">
-					<div class="text">
-						<h2 class="topic-heading">1</h2>
-						<a class="topic" href="AdmiPortal_alum_registrar.jsp"><h4>Registrar nuevo alumno</h4></a>
-					</div>
-				</div>
-
-				<div class="box box2">
-					<div class="text">
-						<h2 class="topic-heading">2</h2>
-                                                <a class="topic"><h4>Listar alumnos</h4></a>
-                                                <form action="AlumnoControl" method="post"><input class="botonlistar"type="submit" name="acc" value="Listar">
-					</div>
-				</div>
-
-				<div class="box box3">
-					<div class="text">
-						<h2 class="topic-heading">3</h2>
-                                                <a class="topic" href="AdmiPortal_alum_buscar.jsp"><h4>Buscar / Modificar / Eliminar alumno</h4></a>
-					</div>
-				</div>
+            <div class="logosec">		
+                <div class="logo">Portal Alumno</div>
+            </div>
 
 
-			</div>
+            <div class="message">
+                <div class="dp">
+                </div>
+            </div>
+        </header>
 
-		</div>
-	</div>
-</body>
+        <div class="main-container">
+            <div class="navcontainer">
+                <nav class="nav">
+                    <div class="nav-upper-options">
+                        <div class="nav-option option1">
+                            <img src=
+                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                                 class="nav-img"
+                                 alt="dashboard">
+                            <a class="nav-link" href="AlumPortal_Inicio.jsp"><h5>Inicio</h5></a>
+
+                        </div>
+
+                        <div class="option2 nav-option">
+                            <img src=
+                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                                 class="nav-img"
+                                 alt="articles">
+                            <a class="nav-link" href="AlumPortal_Perfil.jsp"><h5>Perfil</h5></a>
+
+                        </div>
+
+                        <div class="nav-option option3">
+                            <img src=
+                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                                 class="nav-img"
+                                 alt="report">
+                            <a class="nav-link" href="AlumPortal_Curso.jsp"><h5>Notas</h5></a>
+                        </div>
+
+                        <div class="nav-option option4">
+                            <img src=
+                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                                 class="nav-img"
+                                 alt="institution">
+                            <a class="nav-link" href="AlumPortal_Horario.jsp"><h5>Horario</h5></a>
+                        </div>
+
+                        <div class="nav-option option5">
+                            <img src=
+                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                                 class="nav-img"
+                                 alt="blog">
+                            <a class="nav-link" href="Intranet.jsp"><h5>Eventos</h5></a>
+                        </div>
+
+                        <div class="nav-option option6">
+                            <img src=
+                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                                 class="nav-img"
+                                 alt="settings">
+                            <a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="main">
+
+                <div class="box-container">
+
+                    <div class="container">
+                        <p class="container-title">Bienvenido(a) al Portal del Estudiante de English House, <br>aquí podrás consultar tus dudas.</p>
+
+                        <div class="gradient-cards">
+                            <div class="card" >
+                                <div class="container-card bg-green-box">
+                                    <p class="card-title">Perfil</p>
+                                    <p class="card-description">¿Desear ver tu información personal?</p>
+                                    <button class="button button2">Ingresa Aqui</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="container-card bg-white-box"> 
+                                    <p class="card-title">Notas</p>
+                                    <p class="card-description">¿Desear ver tus notas?</p>
+                                    <button class="button button2">Ingresa Aqui</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="container-card bg-yellow-box">
+                                    <p class="card-title">Horario</p>
+                                    <p class="card-description">Dale un ojo a tu horario de clases</p>
+                                    <button class="button button2">Ingresa Aqui</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="container-card bg-blue-box">
+                                    <p class="card-title">Eventos</p>
+                                    <p class="card-description">Ven y diviertéte con varios eventos recreativos</p>
+                                    <button class="button button2">Ingresa Aqui</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
 
-      
-      
-      
-      
-      
-      
-      
-      <script>
-            let menuicn = document.querySelector(".menuicn");
-            let nav = document.querySelector(".navcontainer");
 
-            menuicn.addEventListener("click",()=>
-            {
-                nav.classList.toggle("navclose");
-            })
-      </script>
+
+
+
+
+
+
+<script>
+    let menuicn = document.querySelector(".menuicn");
+    let nav = document.querySelector(".navcontainer");
+
+    menuicn.addEventListener("click", () =>
+    {
+        nav.classList.toggle("navclose");
+    })
+</script>
 </html>

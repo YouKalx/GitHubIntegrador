@@ -1,4 +1,3 @@
-
 package vista;
 
 import java.io.IOException;
@@ -17,75 +16,81 @@ public class AlumnoControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String acc= request.getParameter("acc");
+        String acc = request.getParameter("acc");
         if (acc.equals("Registrar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");   
-            String cel=request.getParameter("cel");
-            String niv=request.getParameter("niv");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new AlumnoServicioImp().grabar(cod, nom, ape, dni,cel,niv, usu, pas);
+            String IDalu = request.getParameter("IDalu");
+            String nbalu = request.getParameter("nbalu");
+            String apalu = request.getParameter("apalu");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String niv = request.getParameter("niv");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usualu = request.getParameter("usualu");
+            String passalu = request.getParameter("passalu");
+            String msg = new AlumnoServicioImp().grabar(IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_alum_mensaje.jsp");   
+            response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
         }
         if (acc.equals("Iniciar Sesion")) {
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            Object[]fil=new AlumnoServicioImp().validar(usu, pas);
-            if (fil!=null) {
+            String usualu = request.getParameter("usualu");
+            String passalu = request.getParameter("passalu");
+            Object[] fil = new AlumnoServicioImp().validar(usualu, passalu);
+            if (fil != null) {
                 request.getSession().setAttribute("fil", fil);
-                response.sendRedirect("Menu.jsp");   
-            }else{
+                response.sendRedirect("AlumPortal_Inicio.jsp");
+            } else {
                 request.getSession().setAttribute("msg", "Acceso no permitido");
-                response.sendRedirect("Alumno_Intranet_mensaje.jsp");     
-            }  
+                response.sendRedirect("Alumno_Intranet_mensaje.jsp");
+            }
         }
         if (acc.equals("Buscar")) {
-            String cod=request.getParameter("cod");
-            Object[]f=new AlumnoServicioImp().buscar(cod);
-            if (f!=null) {
+            String IDalu = request.getParameter("IDalu");
+            Object[] f = new AlumnoServicioImp().buscar(IDalu);
+            if (f != null) {
                 request.getSession().setAttribute("f", f);
                 response.sendRedirect("AdmiPortal_alum_modificar.jsp");
-            }else{
-                request.getSession().setAttribute("msg", "No existe el profesor solicitado");
-                response.sendRedirect("AdmiPortal_alum_mensaje.jsp");  
+            } else {
+                request.getSession().setAttribute("msg", "No existe el alumno solicitado");
+                response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
             }
         }
         if (acc.equals("Listar")) {
-            List lis=new AlumnoServicioImp().listar();
+            List lis = new AlumnoServicioImp().listar();
             request.getSession().setAttribute("lis", lis);
             response.sendRedirect("AdmiPortal_alum_listar.jsp");
         }
-        
+
         if (acc.equals("Actualizar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String cel=request.getParameter("cel");
-            String niv=request.getParameter("niv");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new AlumnoServicioImp().Actualizar(cod, nom, ape, dni,cel,niv, usu, pas);
+            String IDalu = request.getParameter("IDalu");
+            String nbalu = request.getParameter("nbalu");
+            String apalu = request.getParameter("apalu");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String niv = request.getParameter("niv");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usualu = request.getParameter("usualu");
+            String passalu = request.getParameter("passalu");
+            String msg = new AlumnoServicioImp().Actualizar(IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_alum_mensaje.jsp");  
+            response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
         }
-        
+
         if (acc.equals("Eliminar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String cel=request.getParameter("cel");
-            String niv=request.getParameter("niv");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new AlumnoServicioImp().eliminar(cod, nom, ape, dni,cel,niv, usu, pas);
+            String IDalu = request.getParameter("IDalu");
+            String nbalu = request.getParameter("nbalu");
+            String apalu = request.getParameter("apalu");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String niv = request.getParameter("niv");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usualu = request.getParameter("usualu");
+            String passalu = request.getParameter("passalu");
+            String msg = new AlumnoServicioImp().eliminar(IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_alum_mensaje.jsp");   
+            response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
         }
     }
 

@@ -11,8 +11,8 @@ import persistencia.*;
 public class AlumnoServicioImp  implements AlumnoServicio {
     
     @Override
-    public String grabar(String cod, String nom, String ape, String dni, String cel, String niv, String usu, String pas){
-        Alumno emp=new Alumno(cod, nom, ape, dni,cel,niv, usu, pas);
+    public String grabar(String IDalu, String nbalu, String apalu, String ndni, String gen, String niv, String email, String ncel, String usualu, String passalu){
+        Alumno emp=new Alumno(IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu);
         AlumnoDao empDao=new AlumnoDaoImp();
         String msg=empDao.grabar(emp);
         if (msg==null) {
@@ -21,31 +21,33 @@ public class AlumnoServicioImp  implements AlumnoServicio {
         return msg;
     }
     @Override
-    public Object[]validar(String usu, String pas){
+    public Object[]validar(String usualu, String passalu){
                 AlumnoDao empDao=new AlumnoDaoImp();
-        Alumno emp=empDao.validar(usu, pas);
+        Alumno emp=empDao.validar(usualu, passalu);
         if (emp!=null) {
             Object[]fil=new Object[2];
-            fil[0]=emp.getCod();
-            fil[1]=emp.getNom();
+            fil[0]=emp.getUsualu();
+            fil[1]=emp.getPassalu();
             return fil;
         }
         return null;
     }
 
     @Override
-    public Object[] buscar(String cod) {
-        Alumno emp=new AlumnoDaoImp().buscar(cod);
+    public Object[] buscar(String IDalu) {
+        Alumno emp=new AlumnoDaoImp().buscar(IDalu);
         if (emp!=null) {
-            Object[]f=new Object[8];
-            f[0]=emp.getCod();
-            f[1]=emp.getNom();
-            f[2]=emp.getApe();
-            f[3]=emp.getDni();
-            f[4]=emp.getCel();
-            f[5]=emp.getNiv();
-            f[6]=emp.getUsu();
-            f[7]=emp.getPas();
+            Object[]f=new Object[10];
+            f[0] = emp.getIDalu();
+            f[1] = emp.getNbalu();
+            f[2] = emp.getApalu();
+            f[3] = emp.getNdni();
+            f[4] = emp.getGen();
+            f[5] = emp.getNiv();
+            f[6] = emp.getEmail();
+            f[7] = emp.getNcel();
+            f[8] = emp.getUsualu();
+            f[9] = emp.getPassalu();
             return f;
         }
         return null;
@@ -57,8 +59,8 @@ public class AlumnoServicioImp  implements AlumnoServicio {
     }
 
     @Override
-    public String Actualizar(String cod, String nom, String ape, String dni, String cel, String niv, String usu, String pas) {
-        Alumno emp=new Alumno(cod, nom, ape, dni,cel,niv, usu, pas);
+    public String Actualizar(String IDalu, String nbalu, String apalu, String ndni, String gen, String niv, String email, String ncel, String usualu, String passalu) {
+        Alumno emp=new Alumno(IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu);
         AlumnoDao empDao=new AlumnoDaoImp();
         String msg=empDao.actualizar(emp);
         if (msg==null) {
@@ -68,12 +70,12 @@ public class AlumnoServicioImp  implements AlumnoServicio {
     }
 
     @Override
-    public String eliminar(String cod, String nom, String ape, String dni, String cel, String niv, String usu, String pas) {
-        Alumno emp=new Alumno(cod, nom, ape, dni,cel,niv, usu, pas);
+    public String eliminar(String IDalu, String nbalu, String apalu, String ndni, String gen, String niv, String email, String ncel, String usualu, String passalu) {
+        Alumno emp=new Alumno(IDalu, nbalu, apalu, ndni, gen, niv, email, ncel, usualu, passalu);
         AlumnoDao empDao=new AlumnoDaoImp();
         String msg=empDao.eliminar(emp);
         if (msg==null) {
-            msg="Profesor Eliminado";
+            msg="Alumno Eliminado";
         }
         return msg;
     }

@@ -4,70 +4,101 @@
  */
 package negocio;
 
-/**
- *
- * @author ShuKalx
- */
+
 public class Administrador {
-    private String cod, nom, ape, dni, usu, pas;
+    private String IDadm,nbadm, apadm,ndni, gen, email, ncel, usuadm, passadm;
 
     public Administrador() {
-    }    
-    public Administrador(String cod, String nom, String ape, String dni, String usu, String pas) {
-        this.cod = cod;
-        this.nom = nom;
-        this.ape = ape;
-        this.dni = dni;
-        this.usu = usu;
-        this.pas = pas;
     }
 
-    public String getCod() {
-        return cod;
+    public Administrador(String IDadm, String nbadm, String apadm, String ndni, String gen, String email, String ncel, String usuadm, String passadm) {
+        this.IDadm = IDadm;
+        this.nbadm = nbadm;
+        this.apadm = apadm;
+        this.ndni = ndni;
+        this.gen = gen;
+        this.email = email;
+        this.ncel = ncel;
+        this.usuadm = usuadm;
+        this.passadm = passadm;
     }
 
-    public void setCod(String cod) {
-        this.cod = cod;
+    public String getIDadm() {
+        return IDadm;
     }
 
-    public String getNom() {
-        return nom;
+    public void setIDadm(String IDadm) {
+        this.IDadm = IDadm;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getNbadm() {
+        return nbadm;
     }
 
-    public String getApe() {
-        return ape;
+    public void setNbadm(String nbadm) {
+        this.nbadm = nbadm;
     }
 
-    public void setApe(String ape) {
-        this.ape = ape;
+    public String getApadm() {
+        return apadm;
     }
 
-    public String getDni() {
-        return dni;
+    public void setApadm(String apadm) {
+        this.apadm = apadm;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public String getNdni() {
+        return ndni;
     }
 
-    public String getUsu() {
-        return usu;
+    public void setNdni(String ndni) {
+        this.ndni = ndni;
     }
 
-    public void setUsu(String usu) {
-        this.usu = usu;
+    public String getGen() {
+        return gen;
     }
 
-    public String getPas() {
-        return pas;
+    public void setGen(String gen) {
+        this.gen = gen;
     }
 
-    public void setPas(String pas) {
-        this.pas = pas;
+    public String getEmail() {
+        return email;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getNcel() {
+        return ncel;
+    }
+
+    public void setNcel(String ncel) {
+        this.ncel = ncel;
+    }
+
+    public String getUsuadm() {
+        return usuadm;
+    }
+
+    public void setUsuadm(String usuadm) {
+        this.usuadm = usuadm;
+    }
+
+    public String getPassadm() {
+        return passadm;
+    }
+
+    public void setPassadm(String passadm) {
+        this.passadm = passadm;
+    }
+
+    
+
+   
+
+    
     
 }

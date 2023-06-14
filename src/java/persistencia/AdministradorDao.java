@@ -6,7 +6,7 @@ public interface AdministradorDao {
     public String grabar(Administrador emp);
     public String actualizar(Administrador emp);
     public String eliminar(Administrador emp);
-    public Administrador buscar(String cod);
+    public Administrador buscar(String IDadm);
     public List listar();
-    public Administrador validar(String usu, String pas);
+    public Administrador validar(String usuadm, String passadm);
 }

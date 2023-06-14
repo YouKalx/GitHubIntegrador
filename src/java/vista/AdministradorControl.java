@@ -1,4 +1,3 @@
-
 package vista;
 
 import java.io.IOException;
@@ -19,69 +18,78 @@ public class AdministradorControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String acc= request.getParameter("acc");
+        String acc = request.getParameter("acc");
         if (acc.equals("Registrar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new AdministradorServicioImp().grabar(cod, nom,ape, dni, usu, pas);
+            String IDadm = request.getParameter("IDadm");
+            String nbadm = request.getParameter("nbadm");
+            String apadm = request.getParameter("apadm");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usuadm = request.getParameter("usuadm");
+            String passadm = request.getParameter("passadm");
+            String msg = new AdministradorServicioImp().grabar(IDadm, nbadm, apadm, ndni, gen, email, ncel, usuadm, passadm);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_admi_mensaje.jsp");   
+            response.sendRedirect("AdmiPortal_admi_mensaje.jsp");
         }
         if (acc.equals("Iniciar Sesion")) {
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            Object[]fil=new AdministradorServicioImp().validar(usu, pas);
-            if (fil!=null) {
+            String usuadm = request.getParameter("usuadm");
+            String passadm = request.getParameter("passadm");
+            Object[] fil = new AdministradorServicioImp().validar(usuadm, passadm);
+            if (fil != null) {
                 request.getSession().setAttribute("fil", fil);
-                response.sendRedirect("1_AdmiPortalPrincipal.jsp");   
-            }else{
+                response.sendRedirect("1_AdmiPortalPrincipal.jsp");
+            } else {
                 request.getSession().setAttribute("msg", "Acceso no permitido");
-                response.sendRedirect("Admin_Intranet_mensaje.jsp");     
-            }  
+                response.sendRedirect("Admin_Intranet_mensaje.jsp");
+            }
         }
         if (acc.equals("Buscar")) {
-            String cod=request.getParameter("cod");
-            Object[]f=new AdministradorServicioImp().buscar(cod);
-            if (f!=null) {
+            String IDadm = request.getParameter("IDadm");
+            Object[] f = new AdministradorServicioImp().buscar(IDadm);
+            if (f != null) {
                 request.getSession().setAttribute("f", f);
                 response.sendRedirect("AdmiPortal_admi_modificar.jsp");
-            }else{
+            } else {
                 request.getSession().setAttribute("msg", "No existe el empleado solicitado");
-                response.sendRedirect("AdmiPortal_admi_mensaje.jsp");  
+                response.sendRedirect("AdmiPortal_admi_mensaje.jsp");
             }
         }
         if (acc.equals("Listar")) {
-            List lis=new AdministradorServicioImp().listar();
+            List lis = new AdministradorServicioImp().listar();
             request.getSession().setAttribute("lis", lis);
             response.sendRedirect("AdmiPortal_admi_listar.jsp");
         }
-        
+
         if (acc.equals("Actualizar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new AdministradorServicioImp().Actualizar(cod, nom,ape, dni, usu, pas);
+            String IDadm = request.getParameter("IDadm");
+            String nbadm = request.getParameter("nbadm");
+            String apadm = request.getParameter("apadm");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usuadm = request.getParameter("usuadm");
+            String passadm = request.getParameter("passadm");
+            String msg = new AdministradorServicioImp().Actualizar(IDadm, nbadm, apadm, ndni, gen, email, ncel, usuadm, passadm);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_admi_mensaje.jsp");  
+            response.sendRedirect("AdmiPortal_admi_mensaje.jsp");
         }
-        
+
         if (acc.equals("Eliminar")) {
-            String cod=request.getParameter("cod");
-            String nom=request.getParameter("nom");
-            String ape=request.getParameter("ape");
-            String dni=request.getParameter("dni");
-            String usu=request.getParameter("usu");
-            String pas=request.getParameter("pas");
-            String msg =new AdministradorServicioImp().eliminar(cod, nom,ape, dni, usu, pas);
+            String IDadm = request.getParameter("IDadm");
+            String nbadm = request.getParameter("nbadm");
+            String apadm = request.getParameter("apadm");
+            String ndni = request.getParameter("ndni");
+            String gen = request.getParameter("gen");
+            String email = request.getParameter("email");
+            String ncel = request.getParameter("ncel");
+            String usuadm = request.getParameter("usuadm");
+            String passadm = request.getParameter("passadm");
+            String msg = new AdministradorServicioImp().eliminar(IDadm, nbadm, apadm, ndni, gen, email, ncel, usuadm, passadm);
             request.getSession().setAttribute("msg", msg);
-            response.sendRedirect("AdmiPortal_admi_mensaje.jsp");   
+            response.sendRedirect("AdmiPortal_admi_mensaje.jsp");
         }
     }
 
