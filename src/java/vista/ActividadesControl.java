@@ -80,6 +80,19 @@ public class ActividadesControl extends HttpServlet {
             request.getSession().setAttribute("msg", msg);
             response.sendRedirect("AdmiPortal_actividad_mensaje.jsp");   
         }
+        
+        if (acc.equals("Eventos Doc")) {
+            List lis=new ActividadesServicioImp().listar();
+            request.getSession().setAttribute("lis", lis);
+            response.sendRedirect("ProPortal_Eventos.jsp");
+        }
+        
+        if (acc.equals("Eventos Est")) {
+            List lis=new ActividadesServicioImp().listar();
+            request.getSession().setAttribute("lis", lis);
+            response.sendRedirect("AlumPortal_Eventos.jsp");
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

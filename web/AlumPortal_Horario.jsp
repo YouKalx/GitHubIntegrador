@@ -1,6 +1,12 @@
+<%-- 
+    Document   : AlumPortal_Horario
+    Created on : 4 jul. 2023, 19:04:51
+    Author     : ShuKalx
+--%>
+
+<%@page import="java.util.List"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -11,9 +17,16 @@
         <meta name="viewport"
               content="width=device-width,
               initial-scale=1.0">
-        <title>Portal del Administrador/Notas</title>
+        <title>Portal del estudiante</title>
+
         <link rel="stylesheet"
-              href="css/style_admin.css">
+              href="css/responsive_admin.css">
+        <link rel="stylesheet"
+              href="css/style">
+        <link rel="stylesheet"
+              href="css/responsive">
+        <link rel="stylesheet"
+              href="css/alumportalinicio.css">
         <link rel="stylesheet"
               href="css/responsive_admin.css">
         <link rel="stylesheet"
@@ -23,102 +36,75 @@
         <link rel="stylesheet"
               href="css/dash_admi_listar.css">
         <link rel="stylesheet"
-              href="css/admiPortal_nivel.css">
+              href="css/admiPortal_actividad.css">
     </head>
-
     <body>
-
         <!-- for header part -->
         <header>
-
             <div class="logosec">		
-                <img src=
-                     "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
-                     class="icn menuicn"
-                     id="menuicn"
-                     alt="menu-icon">
-                <div class="logo">Portal Administrador</div>
+                <div class="logo">Portal Alumno</div>
             </div>
-
-
             <div class="message">
                 <div class="dp">
-                    <img src=
-                         "https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
-                         class="dpicn"
-                         alt="dp">
                 </div>
             </div>
         </header>
-
         <div class="main-container">
             <div class="navcontainer">
                 <nav class="nav">
                     <div class="nav-upper-options">
                         <div class="nav-option option1">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                                 "https://cdn.icon-icons.com/icons2/1151/PNG/512/1486505383-estate-home-building-shop-store-house-real_81431.png"
                                  class="nav-img"
                                  alt="dashboard">
-                            <a class="nav-link" href="1_AdmiPortalPrincipal.jsp"><h5>Administradores</h5></a>
-
+                            <a class="nav-link" href="AlumPortal_Inicio.jsp"><h5><input class="nav-link" style="border: none; background-color: transparent;" type="submit" name="acc" value="Inicio"></h5></a>
                         </div>
-
                         <div class="option2 nav-option">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                                 "https://cdn.icon-icons.com/icons2/370/PNG/512/Users2_37173.png"
                                  class="nav-img"
                                  alt="articles">
-                            <a class="nav-link" href="AdmiPortal_prof.jsp"><h5>Profesores</h5></a>
-
+                            <a class="nav-link" href="AlumPortal_Perfil.jsp"><h5><form action="AlumnoControl" method="post"><input class="nav-link" style="border: none; background-color: transparent;" type="submit" name="acc" value="Perfil"></form></h5></a>
                         </div>
-
                         <div class="nav-option option3">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                                 "https://cdn.icon-icons.com/icons2/1147/PNG/512/1486486287-align-left-paragraph-text-text-control_81239.png"
                                  class="nav-img"
                                  alt="report">
-                            <a class="nav-link" href="AdmiPortal_alum.jsp"><h5>Alumnos</h5></a>
+                            <a class="nav-link" href="AlumPortal_Nota.jsp"><h5><form action="NotaControl" method="post"><input class="nav-link" style="border: none; background-color: transparent;" type="submit" name="acc" value="Notas"></form></h5></a>
                         </div>
-
                         <div class="nav-option option4">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                                 "https://cdn.icon-icons.com/icons2/2011/PNG/512/calendar_icon_123495.png"
                                  class="nav-img"
                                  alt="institution">
-                            <a class="nav-link" href="AdmiPortal_actividad.jsp"><h5>Eventos</h5></a>
+                            <a class="nav-link" href="AlumPortal_Horario.jsp"><h5><form action="HorarioControl" method="post"><input class="nav-link" style="border: none; background-color: transparent; color: white" type="submit" name="acc" value="Horario Est"></form></h5></a>
                         </div>
-
                         <div class="nav-option option5">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
+                                 "https://cdn.icon-icons.com/icons2/2011/PNG/512/calendar_icon_123495.png"
                                  class="nav-img"
                                  alt="blog">
-                            <a class="nav-link" href="AdmiPortal_notas.jsp"><h5>Notas</h5></a>
+                           <a class="nav-link" href="AlumPortal_Eventos.jsp"><h5><form action="ActividadesControl" method="post"><input class="nav-link" style="border: none; background-color: transparent;" type="submit" name="acc" value="Eventos Est"></form></h5></a>
                         </div>
-
                         <div class="nav-option option6">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                                 "https://cdn.icon-icons.com/icons2/1151/PNG/512/1486505376-folder-paper-storage-office-file-storage-data-storage-report_81411.png"
+                                 class="nav-img"
+                                 alt="blog">
+                            <a class="nav-link" href="AlumPortal_TraSol.jsp"><h5><input class="nav-link" style="border: none; background-color: transparent; " type="submit" name="acc" value="Tramites"></h5></a>
+                        </div>
+                        <div class="nav-option option7">
+                            <img src=
+                                 "https://cdn.icon-icons.com/icons2/1147/PNG/512/1486486321-arrow-back-player-music-multimedia-left-rewind_81210.png"
                                  class="nav-img"
                                  alt="settings">
-                            <a class="nav-link" href="AdmiPortal_horario.jsp"><h5>Horario</h5></a>
+                            <a class="nav-link" href="Intranet.jsp"><h5><input class="nav-link" style="border: none; background-color: transparent; " type="submit" name="acc" value="Salir"></h5></a>
                         </div>
-
-                        <div class="nav-option logout">
-                            <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
-                                 class="nav-img"
-                                 alt="logout">
-                            <a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
-                        </div>
-
                     </div>
-
                 </nav>
             </div>
-
-            <!-- Registro -->
 
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
@@ -126,12 +112,19 @@
 
                         <% List lis = (List) session.getAttribute("lis"); %>
                         <br>
-                        <h1 class="table-dark text-center" colspan="6" style="text-align: center" >Lista de Notas según alumno</h1>
+                        <h1 class="table-dark text-center" colspan="9" style="text-align: center" >Lista de Horarios</h1>
                         <br>
                         <table id="customers">
                             <tr>
-                                <th>Codigo de alumno</th>
-                                <th>Nombre</th>
+                                <th>Código de horario</th>
+                                <th>Turno</th>
+                                <th>Hora de inicio</th>
+                                <th>Hora de fin</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
                             </tr>        
                             <tbody class="table-light">
                                 <% for (int i = 1; i < lis.size(); i++) {  %>
@@ -143,14 +136,17 @@
                                     <td><input class="form-control text-center"   value='<%= f[3]%>' /></td>
                                     <td><input class="form-control text-center"   value='<%= f[4]%>' /></td>
                                     <td><input class="form-control text-center"   value='<%= f[5]%>' /></td>
+                                    <td><input class="form-control text-center"   value='<%= f[6]%>' /></td>
+                                    <td><input class="form-control text-center"   value='<%= f[7]%>' /></td>
+                                    <td><input class="form-control text-center"   value='<%= f[8]%>' /></td>
                                 </tr>
                                 <% }%>
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </div>    
-        </div>  
+            </div>     
+        </div>
     </body>
 
     <script>

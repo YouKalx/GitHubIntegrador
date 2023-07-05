@@ -79,4 +79,24 @@ public class AlumnoServicioImp  implements AlumnoServicio {
         }
         return msg;
     }
+    
+    @Override
+    public Object[] perfil () {
+        Alumno emp=new AlumnoDaoImp().perfil();
+        if (emp!=null) {
+            Object[]f=new Object[10];
+            f[0] = emp.getIDalu();
+            f[1] = emp.getNbalu();
+            f[2] = emp.getApalu();
+            f[3] = emp.getNdni();
+            f[4] = emp.getGen();
+            f[5] = emp.getNiv();
+            f[6] = emp.getEmail();
+            f[7] = emp.getNcel();
+            f[8] = emp.getUsualu();
+            f[9] = emp.getPassalu();
+            return f;
+        }
+        return null;
+    }
 }

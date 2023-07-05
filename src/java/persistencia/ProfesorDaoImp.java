@@ -76,5 +76,26 @@ public class ProfesorDaoImp implements ProfesorDao {
         }
         return null;
     }
+    
+    @Override
+    public Profesor perfil() {
+        String sql = "select * from Docente where IDpro='D001'"+"";
+        Object[] fil = Operacion.buscar(sql);
+        if (fil != null) {
+            Profesor emp = new Profesor();
+            emp.setIDpro(fil[0].toString());
+            emp.setNbpro(fil[1].toString());
+            emp.setAppro(fil[2].toString());
+            emp.setNdni(fil[3].toString());
+            emp.setGen(fil[4].toString());
+            emp.setNiv(fil[5].toString());
+            emp.setNcel(fil[6].toString());
+            emp.setEmail(fil[7].toString());
+            emp.setUsupro(fil[8].toString());
+            emp.setPasspro(fil[9].toString());
+            return emp;
+        }
+        return null;
+    }
 
 }

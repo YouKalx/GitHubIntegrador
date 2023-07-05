@@ -15,4 +15,6 @@ public interface ProfesorServicio {
     public String Actualizar(String IDpro, String nbpro, String appro, String ndni, String gen, String niv, String email, String ncel, String usupro, String passpro);
 
     public String eliminar(String IDpro, String nbpro, String appro, String ndni, String gen, String niv, String email, String ncel, String usupro, String passpro);
+    
+    public Object[] perfil();
 }

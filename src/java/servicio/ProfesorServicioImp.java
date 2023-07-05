@@ -80,4 +80,24 @@ public class ProfesorServicioImp implements ProfesorServicio {
         }
         return msg;
     }
+    
+    @Override
+    public Object[] perfil() {
+        Profesor emp = new ProfesorDaoImp().perfil();
+        if (emp != null) {
+            Object[] f = new Object[10];
+            f[0] = emp.getIDpro();
+            f[1] = emp.getNbpro();
+            f[2] = emp.getAppro();
+            f[3] = emp.getNdni();
+            f[4] = emp.getGen();
+            f[5] = emp.getNiv();
+            f[6] = emp.getEmail();
+            f[7] = emp.getNcel();
+            f[8] = emp.getUsupro();
+            f[9] = emp.getPasspro();
+            return f;
+        }
+        return null;
+    }
 }

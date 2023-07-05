@@ -41,7 +41,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.html"><img src="images/logoeh.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -60,7 +60,7 @@
                                  <a class="nav-link" href="Nosotros.jsp">Nosotros</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="Contáctanos.jsp">Contáctanos</a>
+                                 <a class="nav-link" href="Cont?ctanos.jsp">Cont?ctanos</a>
                               </li>
                               <li class="nav-item active">
                                  <a class="nav-link" href="Intranet.jsp">Intranet</a>

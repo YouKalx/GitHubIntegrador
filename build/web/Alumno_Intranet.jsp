@@ -94,7 +94,7 @@
                                                 <span class="h1 fw-bold mb-0">English House</span>
                                             </div>
 
-                                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesión</h5>
+                                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesi?n</h5>
 
                                             <div class="form-outline mb-4">
 
@@ -104,7 +104,7 @@
                                             </div>
 
                                             <div class="form-outline mb-4">
-                                                <label class="form-label" for="form2Example27">Contraseña</label>
+                                                <label class="form-label" for="form2Example27">Contrase?a</label>
                                                 <input type = "password" name = "passalu" class="form-control form-control-lg" />  
                                             </div>
 

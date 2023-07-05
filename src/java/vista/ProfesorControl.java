@@ -38,7 +38,7 @@ public class ProfesorControl extends HttpServlet {
             Object[] fil = new ProfesorServicioImp().validar(usu, pas);
             if (fil != null) {
                 request.getSession().setAttribute("fil", fil);
-                response.sendRedirect("Menu.jsp");
+                response.sendRedirect("ProPortal_Inicio.jsp");
             } else {
                 request.getSession().setAttribute("msg", "Acceso no permitido");
                 response.sendRedirect("Profesor_Intranet_mensaje.jsp");
@@ -92,6 +92,18 @@ public class ProfesorControl extends HttpServlet {
             request.getSession().setAttribute("msg", msg);
             response.sendRedirect("AdmiPortal_prof_mensaje.jsp");
         }
+        
+        if (acc.equals("Perfil")) { 
+            Object[] f = new ProfesorServicioImp().perfil();
+            if (f != null) {
+                request.getSession().setAttribute("f", f);
+                response.sendRedirect("ProPortal_Perfil.jsp");
+            } else {
+                request.getSession().setAttribute("msg", "No existe el alumno solicitado");
+                response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
+            }
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

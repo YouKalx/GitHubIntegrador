@@ -92,6 +92,18 @@ public class AlumnoControl extends HttpServlet {
             request.getSession().setAttribute("msg", msg);
             response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
         }
+        
+        if (acc.equals("Perfil")) { 
+            Object[] f = new AlumnoServicioImp().perfil();
+            if (f != null) {
+                request.getSession().setAttribute("f", f);
+                response.sendRedirect("AlumPortal_Perfil.jsp");
+            } else {
+                request.getSession().setAttribute("msg", "No existe el alumno solicitado");
+                response.sendRedirect("AdmiPortal_alum_mensaje.jsp");
+            }
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

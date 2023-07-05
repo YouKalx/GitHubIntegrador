@@ -25,10 +25,8 @@
     </head>
 
     <body>
-
         <!-- for header part -->
         <header>
-
             <div class="logosec">		
                 <img src=
                      "https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
@@ -55,70 +53,52 @@
                     <div class="nav-upper-options">
                         <div class="nav-option option1">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/manager_icon_129392.png"
                                  class="nav-img"
                                  alt="dashboard">
                             <a class="nav-link" href="1_AdmiPortalPrincipal.jsp"><h5>Administradores</h5></a>
-
                         </div>
-
                         <div class="option2 nav-option">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/teamwork_icon_129427.png"
                                  class="nav-img"
                                  alt="articles">
                             <a class="nav-link" href="AdmiPortal_prof.jsp"><h5>Profesores</h5></a>
-
                         </div>
-
                         <div class="nav-option option3">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/curriculum_vitae_icon_129369.png"
                                  class="nav-img"
                                  alt="report">
                             <a class="nav-link" href="AdmiPortal_alum.jsp"><h5>Alumnos</h5></a>
                         </div>
-
                         <div class="nav-option option4">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/graphic_design_icon_129286.png"
                                  class="nav-img"
                                  alt="institution">
                             <a class="nav-link" href="AdmiPortal_actividad.jsp"><h5>Eventos</h5></a>
                         </div>
-
                         <div class="nav-option option5">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
-                                 class="nav-img"
-                                 alt="blog">
-                            <a class="nav-link" href="AdmiPortal_notas.jsp"><h5>Notas</h5></a>
-                        </div>
-
-                        <div class="nav-option option6">
-                            <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/calendar_icon_129357.png"
                                  class="nav-img"
                                  alt="settings">
                             <a class="nav-link" href="AdmiPortal_horario.jsp"><h5>Horario</h5></a>
                         </div>
-
                         <div class="nav-option logout">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+                                 "https://cdn.icon-icons.com/icons2/1147/PNG/512/1486486321-arrow-back-player-music-multimedia-left-rewind_81210.png"
                                  class="nav-img"
                                  alt="logout">
                             <a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
                         </div>
-
                     </div>
 
                 </nav>
             </div>
 
             <!-- Modificar -->
-
-
 
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
@@ -148,45 +128,49 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">DNI </td>
-                                        <td> <input class="form-control" type="text" name="ndni" value='<%= f[3]%>'/> </td>
+                                        <td> <input class="form-control" type="number" name="ndni" value='<%= f[3]%>'/> </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Género</td>
-                                        <td> <input class="form-control" type="text" name="gen" value='<%= f[4]%>'/> </td>
+                                        <td> <select class="form-control" name="gen" value='<%= f[4]%>'>
+                                                <option value="Masculino">Masculino</option> 
+                                                <option value="Femenino" select >Femenino</option>
+                                            </select>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Nivel</td>
-                                        <td> <input class="form-control" type="text" name="niv" value='<%= f[5]%>'/> </td>
+                                        <td> <select class="form-control" name="niv" value='<%= f[5]%>'>
+                                                <option value="Básico">Básico</option> 
+                                                <option value="Intermedio">Intermedio</option>
+                                                <option value="Avanzado">Avanzado</option>
+                                            </select></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Email</td>
-                                        <td> <input class="form-control" type="text" name="email" value='<%= f[6]%>'/> </td>
+                                        <td> <input class="form-control" type="email" name="email" value='<%= f[6]%>'/> </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center align-middle">Número de celular</td>
-                                        <td> <input class="form-control" type="text" name="ncel" value='<%= f[7]%>'/> </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center align-middle">Usuario de alumno</td>
-                                        <td> <input class="form-control" type="text" name="usualu" value='<%= f[8]%>'/> </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center align-middle">Contraseña de alumno</td>
-                                        <td> <input class="form-control" type="text" name="passalu" value='<%= f[9]%>'/> </td>
-                                    </tr>
+                                        <td class="text-center align-middle">Número de celular</td><br>
+                                <td> <input class="form-control" type="tel" name="ncel" value='<%= f[7]%>'/> </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center align-middle">Usuario de alumno</td>
+                                    <td> <input class="form-control" type="text" name="usualu" value='<%= f[8]%>'/> </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center align-middle">Contraseña de alumno</td>
+                                    <td> <input class="form-control" type="text" name="passalu" value='<%= f[9]%>'/> </td>
+                                </tr>
                                 </tbody>
-
                             </table>
                             <div class="text-center ">
-                                <input type="submit" name="acc" value="Actualizar" class="btn btn-dark fs-4 mt-3 mb-3 btn-sm">
-                                <input type="submit" name="acc" value="Eliminar" class="btn btn-dark fs-4 mt-3 mb-3 btn-sm">
+                                <input type="submit" name="acc" value="Actualizar" class="btn btn-dark fs-4 mt-3 mb-3 btn-sm"> 
                             </div>
                         </form>
                     </div>
-                </div></div>
-
-
-
+                </div>
+            </div>
         </div>    
     </body>
 

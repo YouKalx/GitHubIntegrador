@@ -54,62 +54,46 @@
                     <div class="nav-upper-options">
                         <div class="nav-option option1">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/manager_icon_129392.png"
                                  class="nav-img"
                                  alt="dashboard">
                             <a class="nav-link" href="1_AdmiPortalPrincipal.jsp"><h5>Administradores</h5></a>
-
                         </div>
-
                         <div class="option2 nav-option">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/teamwork_icon_129427.png"
                                  class="nav-img"
                                  alt="articles">
                             <a class="nav-link" href="AdmiPortal_prof.jsp"><h5>Profesores</h5></a>
-
                         </div>
-
                         <div class="nav-option option3">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/curriculum_vitae_icon_129369.png"
                                  class="nav-img"
                                  alt="report">
                             <a class="nav-link" href="AdmiPortal_alum.jsp"><h5>Alumnos</h5></a>
                         </div>
-
                         <div class="nav-option option4">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/graphic_design_icon_129286.png"
                                  class="nav-img"
                                  alt="institution">
                             <a class="nav-link" href="AdmiPortal_actividad.jsp"><h5>Eventos</h5></a>
                         </div>
-
                         <div class="nav-option option5">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
-                                 class="nav-img"
-                                 alt="blog">
-                            <a class="nav-link" href="AdmiPortal_notas.jsp"><h5>Notas</h5></a>
-                        </div>
-
-                        <div class="nav-option option6">
-                            <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/calendar_icon_129357.png"
                                  class="nav-img"
                                  alt="settings">
                             <a class="nav-link" href="AdmiPortal_horario.jsp"><h5>Horario</h5></a>
                         </div>
-
                         <div class="nav-option logout">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+                                 "https://cdn.icon-icons.com/icons2/1147/PNG/512/1486486321-arrow-back-player-music-multimedia-left-rewind_81210.png"
                                  class="nav-img"
                                  alt="logout">
                             <a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
                         </div>
-
                     </div>
 
                 </nav>
@@ -120,52 +104,59 @@
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
 
-                    <div class="container" id="advanced-search-form">
+                    <div class="container" id="advanced-search-form" style="margin: auto;" >
                         <h2>Registro de Alumno</h2>
                         <form action="AlumnoControl" method="post">
                             <div class="form-group">
-                                <label for="first-name">Código de alumno</label>
+                                <label>Código de alumno</label><br>
                                 <input type="text" class="form-control" name="IDalu">
                             </div>
                             <div class="form-group">
-                                <label for="last-name">Nombre de alumno</label>
+                                <label>Nombre de alumno</label><br>
                                 <input type="text" class="form-control" name="nbalu">
                             </div>
                             <div class="form-group">
-                                <label for="country">Apellido de alumno</label>
+                                <label>Apellido de alumno</label><br>
                                 <input type="text" class="form-control" name="apalu" >
                             </div>
                             <div class="form-group">
-                                <label for="number">DNI del alumno </label>
-                                <input type="text" class="form-control" name="ndni">
+                                <label>DNI del alumno </label><br>
+                                <input type="number" class="form-control" name="ndni">
                             </div>
                             <div class="form-group">
-                                <label for="last-name">Género del alumno</label>
-                                <input type="text" class="form-control" name="gen">
+                                <label>Género del alumno</label><br>
+                                <select class="form-control" name="gen">
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Femenino">Femenino</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="last-name">Nivel del alumno</label>
-                                <input type="text" class="form-control" name="ni">
+                                <label>Email de alumno</label><br>
+                                <input type="email" class="form-control" name="email" >
                             </div>
                             <div class="form-group">
-                                <label for="country">Email de alumno</label>
-                                <input type="text" class="form-control" name="email" >
+                                <label>Nivel del alumno</label><br>
+                                <select class="form-control" name="niv">
+                                    <option value="Básico">Básico</option>
+                                    <option value="Intermedio">Intermedio</option>
+                                    <option value="Avanzado">Avanzado</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="number">N°cel de alumno </label>
-                                <input type="text" class="form-control" name="ncel">
+                                <label>N°cel de alumno</label><br>
+                                <input type="tel" class="form-control" name="ncel">
                             </div>
                             <div class="form-group">
-                                <label for="age">Crea un usuario</label>
+                                <label>Crea un usuario</label><br>
                                 <input type="text" class="form-control" name="usualu">
                             </div>
                             <div class="form-group">
-                                <label for="email">Crea una contraseña</label>
+                                <label>Crea una contraseña</label><br>
                                 <input type="password" class="form-control" name="passalu">
                             </div>
                             <br><br><!-- comment -->
                             <div class="clearfix"></div>
-                            <div class="text-center ">
+                            <div class="text-center " style=" width: 330px; margin: 0 auto;" ><br><br><br><br><br><br>
                                 <input type="submit" name="acc" value="Registrar" class="btn btn-dark fs-4 mt-3 mb-3 btn-lg">
                             </div>
 

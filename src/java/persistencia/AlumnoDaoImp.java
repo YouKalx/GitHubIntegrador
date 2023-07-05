@@ -76,5 +76,25 @@ public class AlumnoDaoImp implements AlumnoDao {
         }
         return null;
     }
+    @Override
+    public Alumno perfil() {
+        String sql = "select * from estudiante where IDalu='A001'" + "";
+        Object[] fil = Operacion.buscar(sql);
+        if (fil != null) {
+            Alumno emp = new Alumno();
+            emp.setIDalu(fil[0].toString());
+            emp.setNbalu(fil[1].toString());
+            emp.setApalu(fil[2].toString());
+            emp.setNdni(fil[3].toString());
+            emp.setGen(fil[4].toString());
+            emp.setNiv(fil[5].toString());
+            emp.setNcel(fil[6].toString());
+            emp.setEmail(fil[7].toString());
+            emp.setUsualu(fil[8].toString());
+            emp.setPassalu(fil[9].toString());
+            return emp;
+        }
+        return null;
+    }
 
 }

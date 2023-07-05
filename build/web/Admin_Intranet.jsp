@@ -94,7 +94,7 @@
                           <span class="h1 fw-bold mb-0">English House</span>
                         </div>
 
-                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesión</h5>
+                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesi?n</h5>
 
                         <div class="form-outline mb-4">
 
@@ -104,7 +104,7 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                         <label class="form-label" for="form2Example27">Contraseña</label>
+                         <label class="form-label" for="form2Example27">Contrase?a</label>
                           <input type = "password" name = "passadm" class="form-control form-control-lg" />  
                         </div>
 
@@ -132,9 +132,6 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      
-
-      
+      <script src="js/custom.js"></script>  
    </body>
 </html>

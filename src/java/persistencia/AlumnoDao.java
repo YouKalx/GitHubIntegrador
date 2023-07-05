@@ -16,4 +16,6 @@ public interface AlumnoDao {
     public List listar();
 
     public Alumno validar(String usualu, String passalu);
+    
+    public Alumno perfil();
 }

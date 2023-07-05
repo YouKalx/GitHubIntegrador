@@ -92,6 +92,18 @@ public class HorarioControl extends HttpServlet {
             request.getSession().setAttribute("msg", msg);
             response.sendRedirect("AdmiPortal_horario_mensaje.jsp");   
         }
+        
+        if (acc.equals("Horario Doc")) {
+            List lis=new HorarioServicioImp().listar();
+            request.getSession().setAttribute("lis", lis);
+            response.sendRedirect("ProPortal_Horario.jsp");
+        }
+        
+        if (acc.equals("Horario Est")) {
+            List lis=new HorarioServicioImp().listar();
+            request.getSession().setAttribute("lis", lis);
+            response.sendRedirect("AlumPortal_Horario.jsp");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

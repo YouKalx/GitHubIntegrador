@@ -16,4 +16,6 @@ public interface ProfesorDao {
     public List listar();
 
     public Profesor validar(String usupro, String passpro);
+    
+    public Profesor perfil();
 }

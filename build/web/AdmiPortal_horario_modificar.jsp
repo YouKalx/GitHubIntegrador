@@ -55,57 +55,42 @@
                     <div class="nav-upper-options">
                         <div class="nav-option option1">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/manager_icon_129392.png"
                                  class="nav-img"
                                  alt="dashboard">
                             <a class="nav-link" href="1_AdmiPortalPrincipal.jsp"><h5>Administradores</h5></a>
-
                         </div>
-
                         <div class="option2 nav-option">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/teamwork_icon_129427.png"
                                  class="nav-img"
                                  alt="articles">
                             <a class="nav-link" href="AdmiPortal_prof.jsp"><h5>Profesores</h5></a>
-
                         </div>
-
                         <div class="nav-option option3">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/curriculum_vitae_icon_129369.png"
                                  class="nav-img"
                                  alt="report">
                             <a class="nav-link" href="AdmiPortal_alum.jsp"><h5>Alumnos</h5></a>
                         </div>
-
                         <div class="nav-option option4">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/graphic_design_icon_129286.png"
                                  class="nav-img"
                                  alt="institution">
                             <a class="nav-link" href="AdmiPortal_actividad.jsp"><h5>Eventos</h5></a>
                         </div>
-
                         <div class="nav-option option5">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
-                                 class="nav-img"
-                                 alt="blog">
-                            <a class="nav-link" href="AdmiPortal_notas.jsp"><h5>Notas</h5></a>
-                        </div>
-
-                        <div class="nav-option option6">
-                            <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
+                                 "https://cdn.icon-icons.com/icons2/2104/PNG/96/calendar_icon_129357.png"
                                  class="nav-img"
                                  alt="settings">
                             <a class="nav-link" href="AdmiPortal_horario.jsp"><h5>Horario</h5></a>
                         </div>
-
                         <div class="nav-option logout">
                             <img src=
-                                 "https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
+                                 "https://cdn.icon-icons.com/icons2/1147/PNG/512/1486486321-arrow-back-player-music-multimedia-left-rewind_81210.png"
                                  class="nav-img"
                                  alt="logout">
                             <a class="nav-link" href="Intranet.jsp"><h5>Salir</h5></a>
@@ -144,31 +129,46 @@
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Hora de inicio</td>
-                                        <td> <input class="form-control" type="text" name="hoini" value='<%= f[2]%>'/> </td>
+                                        <td> <input class="form-control" type="time" name="hoini" value='<%= f[2]%>'/> </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Hora de fin</td>
-                                        <td> <input class="form-control" type="text" name="hofin" value='<%= f[3]%>'/> </td>
+                                        <td> <input class="form-control" type="time" name="hofin" value='<%= f[3]%>'/> </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Lunes</td>
-                                        <td> <input class="form-control" type="text" name="lun" value='<%= f[4]%>'/> </td>
+                                        <td> <select class="form-control" name="lun" value='<%= f[4]%>'>
+                                                <option value="Si">Si</option> 
+                                                <option value="No">No</option>
+                                            </select></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Martes</td>
-                                        <td> <input class="form-control" type="text" name="mar" value='<%= f[5]%>'/> </td>
+                                        <td> <select class="form-control" name="mar" value='<%= f[5]%>'>
+                                                <option value="Si">Si</option> 
+                                                <option value="No">No</option>
+                                            </select></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Miércoles</td>
-                                        <td> <input class="form-control" type="text" name="mie" value='<%= f[6]%>'/> </td>
+                                        <td> <select class="form-control" name="mie" value='<%= f[6]%>'>
+                                                <option value="Si">Si</option> 
+                                                <option value="No">No</option>
+                                            </select></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Jueves</td>
-                                        <td> <input class="form-control" type="text" name="jue" value='<%= f[7]%>'/> </td>
+                                        <td> <select class="form-control" name="jue" value='<%= f[7]%>'>
+                                                <option value="Si">Si</option> 
+                                                <option value="No">No</option>
+                                            </select></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center align-middle">Viernes</td>
-                                        <td> <input class="form-control" type="text" name="vie" value='<%= f[8]%>'/> </td>
+                                        <td> <select class="form-control" name="vie" value='<%= f[8]%>'>
+                                                <option value="Si">Si</option> 
+                                                <option value="No">No</option>
+                                            </select></td>
                                     </tr>
 
                                 </tbody>
