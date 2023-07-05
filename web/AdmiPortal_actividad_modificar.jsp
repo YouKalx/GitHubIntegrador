@@ -2,7 +2,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!DOCTYPE html>
-+<html lang="es">
+<html lang="es">
 
     <head>
         <meta charset="UTF-8">
@@ -106,7 +106,7 @@
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
 
-                    <div class="container" id="advanced-search-form">
+                    <div class="container" id="advanced-search-form" style="margin: auto;">
 
                         <form  action="ActividadesControl" method="post" >
                             <% Object[] f = (Object[]) session.getAttribute("f");%>

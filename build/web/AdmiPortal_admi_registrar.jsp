@@ -101,7 +101,7 @@
 
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
-                    <div class="container" id="advanced-search-form">
+                    <div class="container" id="advanced-search-form" style="margin: auto;">
                         <h2>Registro de Administradores</h2>
                         <form action="AdministradorControl" method="post">
                             <div class="form-group">

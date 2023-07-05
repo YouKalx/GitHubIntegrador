@@ -100,67 +100,73 @@
             <!-- Registro -->
 
             <div class="main" style="background: #e4f4fd">
-                <div class="box-container">
+                <div class="box-container">   
+                    <div class="container" id="advanced-search-form" style="margin: auto;">
 
-                    <div class="container" id="advanced-search-form">
-                        <h2>Registro de Profesores</h2>
-                        <form action="ProfesorControl" method="post">
-                            <div class="form-group">
-                                <label>Código de profesor</label><br>
-                                <input type="text" class="form-control" name="IDpro">
-                            </div>
-                            <div class="form-group">
-                                <label>Nombre de profesor</label><br>
-                                <input type="text" class="form-control" name="nbpro">
-                            </div>
-                            <div class="form-group">
-                                <label>Apellido de profesor</label><br>
-                                <input type="text" class="form-control" name="appro" >
-                            </div>
-                            <div class="form-group">
-                                <label>DNI del profesor </label><br>
-                                <input type="text" class="form-control" name="ndni">
-                            </div>
-                            <div class="form-group">
-                                <label>Género del profesor</label><br>
-                                <select class="form-control" name="gen">
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Femenino">Femenino</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>Email de profesor</label><br>
-                                <input type="email" class="form-control" name="email" >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>Nivel del profesor</label><br>
-                                <select class="form-control" name="niv">
-                                    <option value="Básico">Básico</option>
-                                    <option value="Intermedio">Intermedio</option>
-                                    <option value="Avanzado">Avanzado</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label>N°cel de profesor </label><br>
-                                <input type="tel" class="form-control" name="ncel">
-                            </div>
-                            <div class="form-group">
-                                <label>Crea un usuario</label><br>
-                                <input type="text" class="form-control" name="usupro">
-                            </div>
-                            <div class="form-group">
-                                <label>Crea una contraseña</label><br>
-                                <input type="password" class="form-control" name="passpro">
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="text-center " style=" width: 330px; margin: 0 auto;">
-                                <input type="submit" name="acc" value="Registrar" class="btn btn-dark fs-4 mt-3 mb-3 btn-lg">
+                        <form  action="ProfesorControl" method="post" >
+                            <% Object[] f = (Object[]) session.getAttribute("f");%>
+                            <table class="table">
+                                <th class="table-dark text-center" colspan="2">
+                                    <h1>Editar Alumno</h1>
+                                    <br><br>
+                                </th>
+
+                                <tbody class="table-light">
+                                    <tr>
+                                        <td class="text-center align-middle">Código de profesor</td>
+                                        <td> <input class="form-control" type="text" name="IDpro" value='<%= f[0]%>'/> </td>
+                                    </tr>      
+                                    <tr>
+                                        <td class="text-center align-middle">Nombre</td>
+                                        <td> <input class="form-control" type="text" name="nbpro" value='<%= f[1]%>'/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Apellido</td>
+                                        <td> <input class="form-control" type="text" name="appro" value='<%= f[2]%>'/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">DNI </td>
+                                        <td> <input class="form-control" type="number" name="ndni" value='<%= f[3]%>'/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Género</td>
+                                        <td> <select class="form-control" name="gen" value='<%= f[4]%>'>
+                                                <option value="Masculino">Masculino</option> 
+                                                <option value="Femenino" select >Femenino</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Nivel</td>
+                                        <td> <select class="form-control" name="niv" value='<%= f[5]%>'>
+                                                <option value="Básico">Básico</option> 
+                                                <option value="Intermedio">Intermedio</option>
+                                                <option value="Avanzado">Avanzado</option>
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Email</td>
+                                        <td> <input class="form-control" type="email" name="email" value='<%= f[6]%>'/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">Número de celular</td><br>
+                                <td> <input class="form-control" type="tel" name="ncel" value='<%= f[7]%>'/> </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center align-middle">Usuario de alumno</td>
+                                    <td> <input class="form-control" type="text" name="usupro" value='<%= f[8]%>'/> </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center align-middle">Contraseña de alumno</td>
+                                    <td> <input class="form-control" type="text" name="passpro" value='<%= f[9]%>'/> </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center ">
+                                <input type="submit" name="acc" value="Actualizar" class="btn btn-dark fs-4 mt-3 mb-3 btn-sm"> 
                             </div>
                         </form>
-                    </div>
-                </div>            	
+                    </div>         	
             </div>
     </body>
 

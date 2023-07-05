@@ -108,7 +108,7 @@
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
 
-                    <div class="container" id="advanced-search-form">
+                    <div class="container" id="advanced-search-form" style="margin: auto;">
 
                         <form  action="HorarioControl" method="post" >
                             <% Object[] f = (Object[]) session.getAttribute("f");%>

@@ -107,7 +107,7 @@
 
                     <div class="container" id="advanced-search-form">
                         <h2>Registro de Horario</h2>
-                        <form action="HorarioControl" method="post">
+                        <form action="HorarioControl" method="post" style="margin: auto;">
                             
                             <div class="form-group">
                                 <label>Código del horario</label><br>

@@ -52,7 +52,7 @@ public class AdministradorControl extends HttpServlet {
                 request.getSession().setAttribute("f", f);
                 response.sendRedirect("AdmiPortal_admi_modificar.jsp");
             } else {
-                request.getSession().setAttribute("msg", "No existe el empleado solicitado");
+                request.getSession().setAttribute("msg", "No existe el Administrador solicitado");
                 response.sendRedirect("AdmiPortal_admi_mensaje.jsp");
             }
         }

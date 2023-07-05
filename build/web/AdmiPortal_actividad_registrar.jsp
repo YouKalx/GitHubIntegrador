@@ -103,7 +103,7 @@
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
 
-                    <div class="container" id="advanced-search-form">
+                    <div class="container" id="advanced-search-form" style="margin: auto;">
                         <h2>Registro de Eventos</h2>
                         <form action="ActividadesControl" method="post">
                             <div class="form-group">

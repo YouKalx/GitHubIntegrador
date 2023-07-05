@@ -102,7 +102,7 @@
             <div class="main" style="background: #e4f4fd">
                 <div class="box-container">
 
-                    <div class="container" id="advanced-search-form">
+                    <div class="container" id="advanced-search-form" style="margin: auto;">
                         <h2>Registro de Profesores</h2>
                         <form action="ProfesorControl" method="post">
                             <div class="form-group">
