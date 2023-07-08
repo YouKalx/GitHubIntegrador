@@ -14,9 +14,7 @@ public class HorarioDaoImp implements HorarioDao{
 
     @Override
     public String actualizar(Horario emp) {
-        String sql="update calen set turno="+emp.getTur()+"'hoini='"+emp.getHoini()+"'hofin='"+emp.getHofin()+
-                "'lun='"+emp.getLun()+"'mar='"+emp.getMar()+"'mie='"+emp.getMie()+"'jue='"+emp.getJue()+
-                "'vie='"+emp.getVie()+"'where codho='"+emp.getCodho();
+        String sql="update calen set turno='"+emp.getTur()+"'where codho='"+emp.getCodho()+ "'";
         return Operacion.ejecutar(sql);
     }
 

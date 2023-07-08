@@ -11,6 +11,8 @@
         <title>English House</title>
         <meta name="keywords" content="">
         <meta name="description" content="">
+        
+        
         <meta name="author" content="">
         <!-- bootstrap css -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -92,10 +94,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="text-bg">
-                                            <span>?NUEVO PROGRAMA!</span>
+                                            <span>¡NUEVO PROGRAMA!</span>
                                             <h1>EN ENGLISH HOUSE</h1>
-                                            <p>MATR?CULAS ABIERTAS ?DESDE HOY!</p>
-                                            <a href="#">M?S INFORMACI?N</a>
+                                            <p>MATRÍCULAS ABIERTAS ¡DESDE HOY!</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -113,9 +114,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="text-bg">
-                                            <span>?DIFICIL APRENDER INGLES?</span>
+                                            <span>¿DIFICIL APRENDER INGLES?</span>
                                             <h1>ESO YA NO ES EXCUSA</h1>
-                                            <p>Estudia con nosotros, contamos con excelentes profesores y excelente gesti?n. ?Qu? esperas? Ve por tu certificado!</p>
+                                            <p>Estudia con nosotros, contamos con excelentes profesores y excelente gestión. ¿Qué esperas? Ve por tu certificado!</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -133,9 +134,9 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="text-bg">
-                                            <span>?DESEAS UN HORARIO ADAPTABLE?</span>
-                                            <h1>AQU? LO TENDR?SS</h1>
-                                            <p>Contamos con varios horarios que son flexibles para tu educaci?n.</p>
+                                            <span>¿DESEAS UN HORARIO ADAPTABLE?</span>
+                                            <h1>AQUÍ LO TENDRÁS!</h1>
+                                            <p>Contamos con varios horarios que son flexibles para tu educación.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -196,7 +197,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="titlepage">
-                            <h2>Niveles de Ingl?s</h2>
+                            <h2>Niveles de Inglés</h2>
                         </div>
                     </div>
                 </div>
@@ -207,19 +208,19 @@
                                 <div class="col-md-4 margin_bottom1">
                                     <div class="product_box">
                                         <figure><img src="images/nivel1.png" alt="#"/></figure>
-                                        <h3>Ingl?s F?cil</h3>
+                                        <h3>Inglés Fácil</h3>
                                     </div>
                                 </div>
                                 <div class="col-md-4 margin_bottom1">
                                     <div class="product_box">
                                         <figure><img src="images/nivel2.png" alt="#"/></figure>
-                                        <h3>Ingl?s Intermedio</h3>
+                                        <h3>Inglés Intermedio</h3>
                                     </div>
                                 </div>
                                 <div class="col-md-4 margin_bottom1">
                                     <div class="product_box">
                                         <figure><img src="images/nivel3.png" alt="#"/></figure>
-                                        <h3>Ingl?s Avanzado</h3>
+                                        <h3>Inglés Avanzado</h3>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +256,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="titlepage">
-                        <h2>Rese?as de Alumnos</h2>
+                        <h2>Reseñas de Alumnos</h2>
                     </div>
                 </div>
             </div>
@@ -336,23 +337,17 @@
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <img class="logo1" src="images/logoeh.png" alt="#"/>
-                        <ul class="social_icon">
-                            <li><a href="https://www.facebook.com/idiomasenglish.house"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        </ul>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <h3>Sobre Nosotros</h3>
                         <ul class="about_us">
-                            <li>"English House es un centro<br>de idiomas donde su objetivo<br>es ense?ar a las personas <br>ingl?s.</li>
+                            <li>"English House es un centro<br>de idiomas donde su objetivo<br>es enseñar a las personas <br>inglés.</li>
                         </ul>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <h3>Cont?ctanos</h3>
                         <ul class="conta">
-                            <li>Nos puedes contactar mediante WhatsApp al siguiente n?mero: <br>987845123 </li>
+                            <li>Nos puedes contactar mediante WhatsApp al siguiente número: <br>987845123 </li>
                         </ul>
                     </div>
                 </div>
@@ -370,10 +365,11 @@
     </footer>
     <!-- end footer -->
     <!-- Javascript files-->
-    <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-3.5.0.js" type="text/javascript"></script>
+        <script src="js/jquery-3.5.0.min.js" type="text/javascript"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>

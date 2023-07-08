@@ -107,9 +107,6 @@
         <!-- Featured image -->
         <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
           <img class="img-fluid" src="https://images.pexels.com/photos/5673488/pexels-photo-5673488.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Sample image">
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
         </div>
 
       </div>
@@ -136,9 +133,6 @@
         <!-- Featured image -->
         <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
           <img class="img-fluid" src="https://images.pexels.com/photos/7688460/pexels-photo-7688460.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Sample image">
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
         </div>
 
       </div>
@@ -152,11 +146,7 @@
            Posicionarse entre los mejores centros de idiomas en el mercado, brindando un excelente servicio,
            actividades culturales de excelencia, contribuyendo al desarrollo social.</p>
       </div>
-      <!-- Grid column -->
     </div>
-    
-    <hr class="my-5">
-    
   </section>
 
 </div>  
@@ -275,12 +265,6 @@
                <div class="row">
                   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                      <img class="logo1" src="images/logoeh.png" alt="#"/>
-                     <ul class="social_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                     </ul>
                   </div>
                   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                      <h3>Sobre Nosotros</h3>
@@ -309,10 +293,10 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-3.5.0.js" type="text/javascript"></script>
+        <script src="js/jquery-3.5.0.min.js" type="text/javascript"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>

@@ -21,6 +21,8 @@
               href="css/registro_prof.css">
         <link rel="stylesheet"
               href="css/admiPortal_horario.css">
+        <link rel="stylesheet"
+              href="css/admiPortal_nivel.css">
     </head>
 
     <body>

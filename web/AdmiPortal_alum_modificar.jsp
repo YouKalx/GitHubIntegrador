@@ -166,6 +166,7 @@
                             </table>
                             <div class="text-center ">
                                 <input type="submit" name="acc" value="Actualizar" class="btn btn-dark fs-4 mt-3 mb-3 btn-sm"> 
+                                <input type="submit" name="acc"   value="Eliminar" class="btn btn-dark fs-4 mt-3 mb-3 btn-sm">
                             </div>
                         </form>
                     </div>

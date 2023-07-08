@@ -83,7 +83,7 @@
                                  "https://cdn.icon-icons.com/icons2/2011/PNG/512/calendar_icon_123495.png"
                                  class="nav-img"
                                  alt="blog">
-                           <a class="nav-link" href="AlumPortal_Eventos.jsp"><h5><form action="ActividadesControl" method="post"><input class="nav-link" style="border: none; background-color: transparent; " type="submit" name="acc" value="Eventos Est"></form></h5></a>
+                            <a class="nav-link" href="AlumPortal_Eventos.jsp"><h5><form action="ActividadesControl" method="post"><input class="nav-link" style="border: none; background-color: transparent; " type="submit" name="acc" value="Eventos Est"></form></h5></a>
                         </div>
                         <div class="nav-option option6">
                             <img src=
@@ -132,37 +132,38 @@
                             </div>
 
                             <br><br><br><br>
-                            
+
                             <div class="clearfix"></div>
                             <div class="text-center ">
                                 <input type="submit" name="acc" value="Registrar" class="btn btn-dark fs-4 mt-3 mb-3 btn-lg">
                             </div>
-                            
                         </form>
+                        <a class="btn btn-dark fs-4 mt-3 mb-3 btn-lg" href="AlumPortal_TraSol.jsp"><h5><input class="btn btn-dark fs-4 mt-3 mb-3 btn-lg" type="submit" value="Regresar"></h5></a>
                     </div>
-                </div>         
-            </div>
+                </div>
+            </div>         
         </div>
+    </div>
 
-        <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-        <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-        <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
-        <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
 
-    </body>
+</body>
 
-    <script>
-        let menuicn = document.querySelector(".menuicn");
-        let nav = document.querySelector(".navcontainer");
+<script>
+    let menuicn = document.querySelector(".menuicn");
+    let nav = document.querySelector(".navcontainer");
 
-        menuicn.addEventListener("click", () =>
-        {
-            nav.classList.toggle("navclose");
-        })
-    </script>
-    <script>
-        var myLandbot = new Landbot.Livechat({
-            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1649495-RTV5T6266CPDFM66/index.json',
-        });
-    </script>
+    menuicn.addEventListener("click", () =>
+    {
+        nav.classList.toggle("navclose");
+    })
+</script>
+<script>
+    var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1649495-RTV5T6266CPDFM66/index.json',
+    });
+</script>
 </html>

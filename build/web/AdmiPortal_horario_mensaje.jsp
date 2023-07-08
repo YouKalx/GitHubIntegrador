@@ -22,6 +22,8 @@
               href="css/dash_admi_listar.css">
         <link rel="stylesheet"
               href="css/admiPortal_horario.css">
+        <link rel="stylesheet"
+              href="css/admiPortal_nivel.css">
     </head>
 
     <body>

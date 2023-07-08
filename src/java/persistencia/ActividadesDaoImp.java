@@ -13,9 +13,7 @@ public class ActividadesDaoImp implements ActividadesDao{
 
     @Override
     public String actualizar(Actividades emp) {
-        String sql="update actividades set nombre="+emp.getNom()+"'des='"+emp.getDes()+
-                "'dia='"+emp.getDia()+"'hora='"+emp.getHora()+
-                "' where codac='"+emp.getCodac()+"'";
+        String sql="update actividades set nombre='"+emp.getNom()+"' where codac='"+emp.getCodac()+"'";
         return Operacion.ejecutar(sql);
     }
 

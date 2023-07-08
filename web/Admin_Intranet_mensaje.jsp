@@ -41,7 +41,7 @@
                             <div class="full">
                                 <div class="center-desk">
                                     <div class="logo">
-                                        <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                                        <a href="index.html"><img src="images/logoeh.png" alt="#" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -58,9 +58,6 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="Nosotros.jsp">Nosotros</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Contáctanos.jsp">Contáctanos</a>
                                         </li>
                                         <li class="nav-item active">
                                             <a class="nav-link" href="Intranet.jsp">Intranet</a>
@@ -99,10 +96,7 @@
                                         <div class="box-container">
                                             <div class="container" id="advanced-search-form">
                                                 <h2>Mensaje del Sistema</h2>
-
-                                                <!-- Card -->
                                                 <div class="card">
-
                                                     <div class="card" style="width: 25rem;">
                                                         <% String msg = (String) session.getAttribute("msg");%>
                                                         <div align="center">
@@ -111,9 +105,7 @@
                                                         <a href="Admin_Intranet.jsp" class="boton" ><input type="submit" name="acc" value="Volver al Intranet" style="background-color: green; border-radius: 8px; font-size: 20px; width: 100%; color:white"/></a>
                                                     </div> 
                                                 </div>
-
-                                            </div>
-                                            <!-- Card -->                                 
+                                            </div>                             
                                         </div>              
                                     </div>
                                 </div>
@@ -129,11 +121,10 @@
         <!-- about section -->
         <!-- end footer -->
         <!-- Javascript files-->
-        <script src="js/jquery.min.js"></script>
+              <script src="js/jquery-3.4.0.js" type="text/javascript"></script>
+      <script src="js/jquery-3.4.0.min.js" type="text/javascript"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery-3.0.0.min.js"></script>
-        <!-- sidebar -->
         <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/custom.js"></script>
 
