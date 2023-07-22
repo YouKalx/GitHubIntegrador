@@ -16,23 +16,15 @@
               initial-scale=1.0">
         <title>Portal del Docente</title>
         <link rel="stylesheet"
-              href="css/alumnoPortal.css">
-        <link rel="stylesheet"
               href="css/responsive_admin.css">
         <link rel="stylesheet"
               href="css/style">
         <link rel="stylesheet"
               href="css/responsive">
         <link rel="stylesheet"
-              href="css/responsive_admin.css">
+              href="css/registro_prof.css">
         <link rel="stylesheet"
-              href="css/style">
-        <link rel="stylesheet"
-              href="css/registro_admi.css">
-        <link rel="stylesheet"
-              href="css/dash_admi_listar.css">
-        <link rel="stylesheet"
-              href="css/admiPortal_actividad.css">
+              href="css/admiPortal_alum.css">
     </head>
     <body>
         <header>
@@ -54,7 +46,7 @@
                                  "https://cdn.icon-icons.com/icons2/1151/PNG/512/1486505383-estate-home-building-shop-store-house-real_81431.png"
                                  class="nav-img"
                                  alt="dashboard">
-                            <a class="nav-link" href="ProPortal_Inicio.jsp"><h5><input class="nav-link" style="border: none; background-color: transparent; color: white" type="submit" name="acc" value="Inicio"></h5></a>
+                            <a class="nav-link" href="ProPortal_Inicio.jsp"><h5><input class="nav-link" style="border: none; background-color: transparent;" type="submit" name="acc" value="Inicio"></h5></a>
                         </div>
                         <div class="option2 nav-option">
                             <img src=
